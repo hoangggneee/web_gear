@@ -1,0 +1,187 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+border:1px solid #000;
+height: auto;
+width: 97%;
+margin: 0 auto;        
+}
+i.fa-solid.fa-plus {
+    font-size: 20px;
+    color: black;
+}
+i.fa-solid.fa-plus:hover {
+    color: brown;
+}
+i.fa-solid.fa-minus {
+    font-size: 20px;
+    color: black;
+}
+i.fa-solid.fa-minus:hover {
+    color: brown;
+}
+i.fa-solid.fa-trash {
+    font-size: 20px;
+    color: black;
+}
+i.fa-solid.fa-trash:hover {
+    color: red;
+}
+.wrapper_chitiet{
+    height: auto;
+    width: 90%;
+    margin: 0 auto;   
+}
+a.xoa_all{
+    text-decoration: none;
+}
+.hinhanh_sanpham{
+    float: left;
+    width: 40%; 
+}
+.chitiet_sanpham{
+    float: left;
+     width: 45%;
+     margin:0 10px ;
+}
+input.themgiohang {
+    border: none;
+    background: red;
+    color: white;
+    padding: 12px;
+    font-size: 15px;
+    cursor: pointer;
+}
+input.themgiohang:hover {
+    transition: 0.1s;
+}
+.header {
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 211px;
+    border: 1px solid #000;
+    height: 210px;
+    width: 100%;
+}
+.menu{
+    border:1px solid #ff471a;
+height: 50px;
+width: 100%;
+background: #df80ff;
+}
+ul.list_menu {
+    padding: 0;
+    margin: 0 auto;
+    width: 67%;
+    list-style: none;
+    line-height: 25px;
+}
+ul.list_menu li:hover {
+    background: cadetblue;
+    transition: 0.5s;
+}
+ul.list_menu li a {
+    text-decoration: none;
+    text-align: center;
+    color: #884dff;
+}
+ul.list_menu li {
+    float: left;
+    margin: 7px;
+    padding: 5px;
+}
+#main{
+    border:1px solid #b30000;
+height: auto;
+width: 100%;
+}
+.sidebar{
+    border:1px solid #4e3bb8;
+height: 390px;
+width: 20%;
+margin-top: 5px;
+margin-left: 5px;
+float: left;
+}
+ul.list_sidebar {
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    line-height: 25px;
+}
+ul.list_sidebar li:hover {
+    background: cadetblue;
+    transition: 0.5s;   /*hiệu ứng*/
+}
+ul.list_sidebar li a {
+    text-decoration: none;
+    text-align: left;
+    color: #884dff;
+    display: block;
+}
+ul.list_sidebar li {
+    margin: 7px;
+    padding: 7px;
+}
+.maincontent{
+    /* border:1px solid #ad127e; */
+height: auto;
+width: 79%;
+margin-top: 5px;
+margin-left: 1px;
+float: right;
+}
+ul.product_list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+ul.product_list li img {
+    height: 150px;
+}
+ul.product_list li {
+    width: 15%;
+    border: 1px solid #ddd ; 
+    margin: 7px;
+    float: left;
+    height: 260px;
+
+}
+ul.product_list li a {
+    text-decoration: none;
+}
+ul.product_list li img {
+    width: 100%;
+}
+p.Price_product {
+    text-align: center;
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+}
+p.Title_product {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer{
+    border:1px solid #000;
+height: 150px;
+width: 100%;
+background: #800080;
+}
+p.footer_Coppyright{
+    text-align: center;
+    color: #ff471a;
+}
+.clear{
+    clear:both ;
+}
+ /*Nội Dung Liên Hệ*/
+.lienhe{  
+        font-size: 20px;
+}
