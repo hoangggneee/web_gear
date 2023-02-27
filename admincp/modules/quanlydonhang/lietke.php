@@ -11,6 +11,7 @@
     <th>Địa Chỉ</th>
     <th>Email</th>
     <th>SĐT</th>
+    <th>Tình Trạng</th>
     <th>Quản Lý</th>
 
   </tr>
@@ -20,12 +21,25 @@
         $i++;
   ?>
   <tr>
+    <style>
+      a{
+        text-decoration: none;
+      }
+    </style>
     <td><?php echo $i ?></td>
     <td><?php echo $row['code_cart'] ?></td>
     <td><?php echo $row['tenkhachhang'] ?></td>
     <td><?php echo $row['diachi'] ?></td>
     <td><?php echo $row['email'] ?></td>
     <td><?php echo $row['dienthoai'] ?></td>
+    <td>
+      <?php if($row['cart_status']==1){ // chưa xử lyws thì xuất ra đơn hàng mới
+          echo '<a href="modules/quanlydonhang/xuly.php?code='.$row['code_cart'].'">Đơn Hàng Mới</a>';
+      }else{
+        echo 'Đã Xem ';
+      }
+      ?>
+    </td>
     <td>
         <a href="index.php?action=donhang&query=xemdonhang&code=<?php echo $row['code_cart'] ?>"> Xem Đơn Hàng</a>
     </td>

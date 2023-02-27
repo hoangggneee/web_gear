@@ -3,7 +3,7 @@
   <?php
   if(isset($_SESSION['dangky'])){
     echo 'xin chào ' .'<span style="color: red">'.$_SESSION['dangky'].'</span>'; //in ra tên khách hàng
-    echo $_SESSION['id_khachhang']; //in ra id khách hàng
+    // echo $_SESSION['id_khachhang']; //in ra id khách hàng
   }
   ?>
 </p>

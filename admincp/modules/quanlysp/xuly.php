@@ -23,13 +23,14 @@
         header('location:../../index.php?action=quanlysp&query=them');
     }elseif(isset($_POST['suasanpham'])){
         //sửa
-        if($hinhanh!=''){
+        if(!empty($_FILES['hinhanh']['name'])){      //nếu không trống hình ảnh thì vẫn giữ hình ảnh cũ
             move_uploaded_file($hinhanh_tmp,'uploads/'.$hinhanh);
 
 
             
             
-        $sql_update = "UPDATE tbl_sanpham SET tensanpham='".$tensanpham."',masp='".$masp."',giasp='".$giasp."',soluong='".$soluong."',hinhanh='".$hinhanh."',tomtat='".$tomtat."',noidung='".$noidung."',tinhtrang='".$tinhtrang."',id_danhmuc='".$danhmuc."' WHERE id_sanpham='$_GET[idsanpham]'";
+        $sql_update = "UPDATE tbl_sanpham SET tensanpham='".$tensanpham."',masp='".$masp."',giasp='".$giasp."',soluong='".$soluong."'
+        ,hinhanh='".$hinhanh."',tomtat='".$tomtat."',noidung='".$noidung."',tinhtrang='".$tinhtrang."',id_danhmuc='".$danhmuc."' WHERE id_sanpham='$_GET[idsanpham]'";
         //XÓA HÌNH ẢNH CŨ
         $sql = "SELECT * FROM tbl_sanpham WHERE id_sanpham = '$_GET[idsanpham]' LIMIT 1";  
             $query = mysqli_query($mysqli,$sql);
@@ -37,7 +38,8 @@
                 unlink('uploads/'.$row['hinhanh']);
             }
         }else{
-            $sql_update = "UPDATE tbl_sanpham SET tensanpham='".$tensanpham."',masp='".$masp."',giasp='".$giasp."',soluong='".$soluong."',tomtat='".$tomtat."',noidung='".$noidung."',tinhtrang='".$tinhtrang."',id_danhmuc='".$danhmuc."' WHERE id_sanpham='$_GET[idsanpham]'";
+            $sql_update = "UPDATE tbl_sanpham SET tensanpham='".$tensanpham."',masp='".$masp."',giasp='".$giasp."',soluong='".$soluong."'
+            ,tomtat='".$tomtat."',noidung='".$noidung."',tinhtrang='".$tinhtrang."',id_danhmuc='".$danhmuc."' WHERE id_sanpham='$_GET[idsanpham]'";
         }
         mysqli_query($mysqli,$sql_update);
         header('location:../../index.php?action=quanlysp&query=them');
